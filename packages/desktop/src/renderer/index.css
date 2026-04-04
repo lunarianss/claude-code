@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "highlight.js/styles/github-dark.css";
+
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+  --border: #2e2e2e;
+  --text-primary: #e5e5e5;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666;
+  --accent: #6366f1;
+  --accent-hover: #818cf8;
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #ef4444;
+  --user-bubble: #1e3a5f;
+  --assistant-bubble: #1a1a1a;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* Panel resize handles */
+[data-panel-group-direction="horizontal"] > [data-resize-handle] {
+  width: 1px;
+  background: var(--border);
+  transition: background 0.15s;
+}
+[data-panel-group-direction="horizontal"] > [data-resize-handle]:hover {
+  background: var(--accent);
+  width: 2px;
+}
